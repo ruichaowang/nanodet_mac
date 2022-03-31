@@ -43,7 +43,7 @@ sprintf(modelpath, "/Users/wangruichao/Work/NCNN/nanodet_mac/model/nanodet-%s.bi
 OpenCV， 我的确是编译不成功，直接用 brew 安装的。
 
 ### ncnn build without vulcan
-‘’‘
+```
 cd <ncnn-root-dir> 
 mkdir -p build 
 cd build 
@@ -51,7 +51,7 @@ cd build
 cmake -DCMAKE_OSX_ARCHITECTURES="arm64" -DNCNN_BUILD_EXAMPLES=OFF ..
 cmake --build . -j8
 cmake --build . --target install
-‘’‘
+```
 它生成的文档就在 install 中，我会复制到 3rd party 中，然后用cmake 链接就好。
 
 ## Debug
