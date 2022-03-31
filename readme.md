@@ -39,8 +39,12 @@ sprintf(modelpath, "/Users/wangruichao/Work/NCNN/nanodet_mac/model/nanodet-%s.bi
  
 
 ## Build &  install 相关
-若选择用 brew 安装 brew instal ncnn，他应该是自动安装到了 /opt/homebrew/Cellar/ncnn/20220216
-OpenCV， 我的确是编译不成功，直接用 brew 安装的。
+- 若选择用 brew 安装 brew instal ncnn，他应该是自动安装到了 /opt/homebrew/Cellar/ncnn/20220216
+- OpenCV， 我在 mac ARM 上的确是编译不成功（Ubuntu、 x86 mac 啥的还是完全OK），直接用 brew 安装的。。。。。
+- OpenCV，下载链接： https://github.com/opencv/opencv/releases/tag/4.5.5
+- 虽说官方说明带 vulkan 能编译成功：https://github.com/Tencent/ncnn/wiki/how-to-build#build-for-macos ，但是我的确是各种失败。
+- 官方说明如何编译 ncnn ： https://github.com/Tencent/ncnn/wiki/how-to-build#build-for-macos
+
 
 ### ncnn build without vulcan
 ```
@@ -53,6 +57,8 @@ cmake --build . -j8
 cmake --build . --target install
 ```
 它生成的文档就在 install 中，我会复制到 3rd party 中，然后用cmake 链接就好。
+这里有它官方的说明：
+https://github.com/Tencent/ncnn/wiki/how-to-build#build-for-macos
 
 ## Debug
 - 如果说官方给的example 运行不了，很有可能是因为 Gradle 版本 3.5 版本有些函数不支持了，所以直接update 到 7.1.2， 
