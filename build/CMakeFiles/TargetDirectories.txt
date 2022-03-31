@@ -1,5 +1,3 @@
 /Users/wangruichao/Work/NCNN/nanodet_mac/build/CMakeFiles/linux_ncnn_nanodet.dir
-/Users/wangruichao/Work/NCNN/nanodet_mac/build/CMakeFiles/package.dir
-/Users/wangruichao/Work/NCNN/nanodet_mac/build/CMakeFiles/package_source.dir
 /Users/wangruichao/Work/NCNN/nanodet_mac/build/CMakeFiles/edit_cache.dir
 /Users/wangruichao/Work/NCNN/nanodet_mac/build/CMakeFiles/rebuild_cache.dir
