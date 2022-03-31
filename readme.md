@@ -1,8 +1,8 @@
-# NCNN—nanoDet——Mac
-可以顺利移植 android 的程序到 mac 上（非 vulkan 版本），里面包括了图片和视频的测试 example 
+# ncnn nanodet macOS (ARM)
+验证可以顺利移植 android 的程序到 mac 上（非 vulkan 版本），里面包括了图片和视频的测试 example 
 
 ## 介绍：
-此 Project 为的目的为学习 NCNN 所使用的， 验证移植到 Mac（arm） 的使用可能性
+此 Project 为的目的为学习 NCNN 所使用的， 验证移植到 macOS (ARM) 的使用可能性
 
 ## 程序逻辑
 编译环境，加载模型，读取图像，读取结果，绘制结果
