@@ -1,13 +1,13 @@
 # ncnn nanodet macOS (ARM)
 
-此 Project 为的目的为学习 NCNN 所使用的， 验证移植到 macOS (ARM) 的使用可能性, 当前验证可以顺利移植 android 的程序到 mac 上（非 vulkan 版本），里面包括了图片和视频的测试 example,
+此 Project 为的目的为学习 NCNN 所使用的， 验证移植到 macOS (ARM) ,以及为 安卓 crosscompile 的使用可能性, 当前验证可以顺利移植 android 的程序到 mac 上（非 vulkan 版本），里面包括了图片和视频的测试 example,
 
 ## Build & Run example
 ./bash/build_mac.sh
 ./build_mac/linux_ncnn_nanodet ./model ./data/test_img.jpg ./data/test_img.png
 
 ./bash/build_android.sh
-./build/linux_ncnn_nanodet ./model ./data/test_img.jpg ./data/test_img.png
+./bash/run_anroid.sh
 如果是用 VScode 那就在 .vscode 的 launch 里设置.
 
 ## 程序逻辑
@@ -25,9 +25,9 @@
 可以看 ncnn 的 faq
 https://github.com/Tencent/ncnn/wiki/faq
 
-1.2 加载模型参数, 0408 已经更新
+1.2 加载模型参数, 0408 已经更新,改为参数输入
 
-```
+
 2 加载模型 （Easy）。。。懒得解释。。。。
 
 
