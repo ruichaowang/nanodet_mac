@@ -230,8 +230,8 @@ int NanoDet::load(const char* modeltype, int _target_size, const float* _mean_va
 
     char parampath[256];
     char modelpath[256];
-    sprintf(parampath, "/Users/wangruichao/Work/NCNN/nanodet_mac/model/nanodet-%s.param", modeltype);
-    sprintf(modelpath, "/Users/wangruichao/Work/NCNN/nanodet_mac/model/nanodet-%s.bin", modeltype);
+    sprintf(parampath, "/Users/wangruichao/Work/Archive/NCNN/nanodet_mac/model/nanodet-%s.param", modeltype);
+    sprintf(modelpath, "/Users/wangruichao/Work/Archive/NCNN/nanodet_mac/model/nanodet-%s.bin", modeltype);
     //可以看到，这部分如果是直接使用，会找到不到地址，所以我们先简单在这里添加上我们的系统路径后就可以读到
     // printf("ncnn 加载 para的地址为：  %s \n ", parampath);
 

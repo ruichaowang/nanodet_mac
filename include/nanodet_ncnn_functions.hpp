@@ -2,8 +2,7 @@
 #define nanodet_ncnn_functions
 
 /*
-此文件的作用是为了分离开 src 里的文件，src 是不对外的，是封装好的文件，而
-
+此文件的作用是为了分离开 src 里的文件，src 是不对外的，是封装好的文件，而当前还没有加上去
 
 所以在main.cpp 中，它只需要有三行就可以使用：
 loadModel(0,0);         // 加载模型，当前为第一个 m，即编号0，不用 gpu，
@@ -117,7 +116,7 @@ int loadModel(int modelid, int cpugpu)
           g_nanodet = new NanoDet;
       // printf("找到 GPU， 开始 Load \n ");
       g_nanodet->load(modeltype, target_size, mean_vals[modelid], norm_vals[modelid], use_gpu);
-      // printf("找 GPU，Load 成功，当前炸掉 \n ");
+      // printf("找 GPU，Load，当前炸掉 \n ");
   }
 
   return 0;

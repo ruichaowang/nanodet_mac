@@ -13,17 +13,19 @@
 using namespace std;
 // using namespace cv;
 
-int main(int, char**) {
+int main(int, char* argv[]) {
   std::cout << "Hello, World!\n";
+  const char* model_path=  argv[1]; // 定义为我们真正要添加的路径
+  const char* sample_image_path =  argv[2]; //输入的图像路径
+  const char* image_saving_path =  argv[3]; //输入的图像路径
 
   loadModel(0,0);         // 加载模型，当前为第一个 m，即编号0，不用 gpu，
   MyNdkCamera sampleimg;  // 随便创建一个叫做 sampleimg 的  MyNdkCamera 
 
   //这部分是图片的sample 
-  const char* sample_image_path = "/Users/wangruichao/Work/NCNN/nanodet_mac/data/test_img.jpg";
   cv::Mat img = cv::imread(sample_image_path);
   sampleimg.on_image_render(img);                                                            //运行模型
-  cv::imwrite("/Users/wangruichao/Work/NCNN/nanodet_mac/data/test_img.png", img);            // 保存图像
+  cv::imwrite(image_saving_path, img);            // 保存图像
   
 
 
