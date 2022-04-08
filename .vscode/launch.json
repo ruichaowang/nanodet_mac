@@ -10,7 +10,8 @@
             "name": "Debug",
             "program": "${workspaceFolder}/build/linux_ncnn_nanodet",
             "args": ["./model","./data/test_img.jpg","./data/test_img.png"],
-            "cwd": "${workspaceFolder}"
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "make" 
         }
     ]
 }

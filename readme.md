@@ -1,10 +1,12 @@
 # ncnn nanodet macOS (ARM)
-验证可以顺利移植 android 的程序到 mac 上（非 vulkan 版本），里面包括了图片和视频的测试 example 
 
-## 介绍：
-此 Project 为的目的为学习 NCNN 所使用的， 验证移植到 macOS (ARM) 的使用可能性
+此 Project 为的目的为学习 NCNN 所使用的， 验证移植到 macOS (ARM) 的使用可能性, 当前验证可以顺利移植 android 的程序到 mac 上（非 vulkan 版本），里面包括了图片和视频的测试 example,
 
-## Run example
+## Build & Run example
+./bash/build_mac.sh
+./build_mac/linux_ncnn_nanodet ./model ./data/test_img.jpg ./data/test_img.png
+
+./bash/build_android.sh
 ./build/linux_ncnn_nanodet ./model ./data/test_img.jpg ./data/test_img.png
 如果是用 VScode 那就在 .vscode 的 launch 里设置.
 
@@ -23,14 +25,8 @@
 可以看 ncnn 的 faq
 https://github.com/Tencent/ncnn/wiki/faq
 
-1.2 加载模型参数
-为了图省事，加载 model 中 的 .bin 和 .param，我选择了直接在添加了我的系统路径，
-如果是运行时提示 "fopen nanodet-m-416.param failed", "fopen nanodet-m-416.bin failed"， 那就是说明这里有问题
-```
-char parampath[256];
-char modelpath[256];
-sprintf(parampath, "/Users/wangruichao/Work/NCNN/nanodet_mac/model/nanodet-%s.param", modeltype);
-sprintf(modelpath, "/Users/wangruichao/Work/NCNN/nanodet_mac/model/nanodet-%s.bin", modeltype);
+1.2 加载模型参数, 0408 已经更新
+
 ```
 2 加载模型 （Easy）。。。懒得解释。。。。
 

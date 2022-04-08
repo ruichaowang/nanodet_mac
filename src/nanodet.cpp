@@ -233,7 +233,7 @@ int NanoDet::load(const char* model_path, const char* modeltype, int _target_siz
     
     sprintf(parampath, "%s/nanodet-%s.param", model_path, modeltype);
     sprintf(modelpath, "%s/nanodet-%s.bin", model_path, modeltype);
-    // 0408 修改为相对地址
+    // 0408 
     // printf("ncnn 加载 para的地址为：  %s \n ", parampath);
 
     nanodet.load_param(parampath);
