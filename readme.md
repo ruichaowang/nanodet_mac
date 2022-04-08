@@ -3,12 +3,15 @@
 此 Project 为的目的为学习 NCNN 所使用的， 验证移植到 macOS (ARM) ,以及为 安卓 crosscompile 的使用可能性, 当前验证可以顺利移植 android 的程序到 mac 上（非 vulkan 版本），里面包括了图片和视频的测试 example,
 
 ## Build & Run example
+```
 ./bash/build_mac.sh
 ./build_mac/linux_ncnn_nanodet ./model ./data/test_img.jpg ./data/test_img.png
 
 ./bash/build_android.sh
 ./bash/run_anroid.sh
+
 如果是用 VScode 那就在 .vscode 的 launch 里设置.
+```
 
 ## 程序逻辑
 编译环境，加载模型，读取图像，读取结果，绘制结果
