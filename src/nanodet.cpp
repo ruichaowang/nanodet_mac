@@ -208,7 +208,7 @@ NanoDet::NanoDet()
     workspace_pool_allocator.set_size_compare_ratio(0.f);
 }
 
-int NanoDet::load(const char* modeltype, int _target_size, const float* _mean_vals, const float* _norm_vals, bool use_gpu)
+int NanoDet::load(const char* model_path, const char* modeltype, int _target_size, const float* _mean_vals, const float* _norm_vals, bool use_gpu)
 {
     nanodet.clear();
     blob_pool_allocator.clear();
@@ -230,9 +230,10 @@ int NanoDet::load(const char* modeltype, int _target_size, const float* _mean_va
 
     char parampath[256];
     char modelpath[256];
-    sprintf(parampath, "/Users/wangruichao/Work/Archive/NCNN/nanodet_mac/model/nanodet-%s.param", modeltype);
-    sprintf(modelpath, "/Users/wangruichao/Work/Archive/NCNN/nanodet_mac/model/nanodet-%s.bin", modeltype);
-    //可以看到，这部分如果是直接使用，会找到不到地址，所以我们先简单在这里添加上我们的系统路径后就可以读到
+    
+    sprintf(parampath, "%s/nanodet-%s.param", model_path, modeltype);
+    sprintf(modelpath, "%s/nanodet-%s.bin", model_path, modeltype);
+    // 0408 修改为相对地址
     // printf("ncnn 加载 para的地址为：  %s \n ", parampath);
 
     nanodet.load_param(parampath);

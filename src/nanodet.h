@@ -31,7 +31,7 @@ class NanoDet
 public:
     NanoDet();
 
-    int load(const char* modeltype, int target_size, const float* mean_vals, const float* norm_vals, bool use_gpu = false);
+    int load(const char* model_path, const char* modeltype, int target_size, const float* mean_vals, const float* norm_vals, bool use_gpu = false);
 
     // int load(AAssetManager* mgr, const char* modeltype, int target_size, const float* mean_vals, const float* norm_vals, bool use_gpu = false);
 

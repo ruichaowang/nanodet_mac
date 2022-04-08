@@ -2,14 +2,14 @@
     // 使用 IntelliSense 了解相关属性。 
     // 悬停以查看现有属性的描述。
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
+    "version": "0.3.0",
     "configurations": [
         {
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
             "program": "${workspaceFolder}/build/linux_ncnn_nanodet",
-            "args": ["xx","./data/test_img.jpg","./data/test_img.png"],
+            "args": ["./model","./data/test_img.jpg","./data/test_img.png"],
             "cwd": "${workspaceFolder}"
         }
     ]

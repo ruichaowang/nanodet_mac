@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22.0)
-project(linux_ncnn_nanodet VERSION 0.1.0)
+project(linux_ncnn_nanodet VERSION 0.3.0)
 
 find_package(OpenCV REQUIRED COMPONENTS core highgui imgproc videoio PATHS /opt/homebrew/Cellar/opencv/4.5.5/include/opencv4)
 message(STATUS "找到的 OpenCV_INCLUDE_DIRS 地址 : ${OpenCV_INCLUDE_DIRS}")

@@ -4,6 +4,10 @@
 ## 介绍：
 此 Project 为的目的为学习 NCNN 所使用的， 验证移植到 macOS (ARM) 的使用可能性
 
+## Run example
+./build/linux_ncnn_nanodet ./model ./data/test_img.jpg ./data/test_img.png
+如果是用 VScode 那就在 .vscode 的 launch 里设置.
+
 ## 程序逻辑
 编译环境，加载模型，读取图像，读取结果，绘制结果
 

@@ -65,8 +65,9 @@ void MyNdkCamera::on_image_render(cv::Mat& rgb) const
   * @version 1.0
   * @property 此部分是基于 Java_com_tencent_nanodetncnn_NanoDetNcnn_loadModel 修改的，删除了大量没有用的参数。
   **/
-int loadModel(int modelid, int cpugpu)
+int loadModel(const char* model_reletive_path , int modelid, int cpugpu)
 {
+
   const char* modeltypes[] =
   {  "m", "m-416", "g", "ELite0_320", "ELite1_416", "ELite2_512","RepVGG-A0_416" };
 
@@ -115,7 +116,7 @@ int loadModel(int modelid, int cpugpu)
       if (!g_nanodet)
           g_nanodet = new NanoDet;
       // printf("找到 GPU， 开始 Load \n ");
-      g_nanodet->load(modeltype, target_size, mean_vals[modelid], norm_vals[modelid], use_gpu);
+      g_nanodet->load( model_reletive_path, modeltype, target_size, mean_vals[modelid], norm_vals[modelid], use_gpu);
       // printf("找 GPU，Load，当前炸掉 \n ");
   }
 

@@ -155,10 +155,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/bin/clang++"
 		},
 		{
@@ -251,10 +251,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/bin/clang"
 		},
 		{
@@ -859,7 +859,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "0.1.0"
+			"value" : "0.3.0"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION_MAJOR",
@@ -883,7 +883,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "1"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION_PATCH",
