@@ -8,7 +8,7 @@ if (Darwin STREQUAL ${CMAKE_SYSTEM_NAME})
     # 出此下测,因为这个参数是通用的参数,不会导致报错 
     message(STATUS " 给 mac 编译"  )
     find_package(OpenCV REQUIRED COMPONENTS core highgui imgproc videoio PATHS /opt/homebrew/Cellar/opencv/4.5.5/include/opencv4)
-    set(ncnn_DIR 3rdparty/ncnn) 
+    set(ncnn_DIR /opt/homebrew/Cellar/ncnn/20220216 )  #3rdparty/ncnn
     find_package(ncnn REQUIRED)
     # find_package(ncnn REQUIRED ) #可以找到系统中用 brew 安装的
     # message(STATUS "找到的 OpenCV_INCLUDE_DIRS 地址 : ${OpenCV_INCLUDE_DIRS}")

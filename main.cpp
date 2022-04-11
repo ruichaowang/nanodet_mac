@@ -19,7 +19,7 @@ int main(int, char* argv[]) {
   const char* sample_image_path =  argv[2]; //输入的图像路径
   const char* image_saving_path =  argv[3]; //输入的图像路径
 
-  loadModel(model_path, 0, 0);         // 加载模型，当前为第一个 m，即编号0，不用 gpu，且需要把model_path 传进去
+  loadModel(model_path, 0, 1);         // 加载模型，当前为第一个 m，即编号0，不用 gpu，且需要把model_path 传进去
   MyNdkCamera sampleimg;  // 随便创建一个叫做 sampleimg 的  MyNdkCamera 
 
   //这部分是图片的sample 

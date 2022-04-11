@@ -226,7 +226,11 @@ int NanoDet::load(const char* model_path, const char* modeltype, int _target_siz
     nanodet.opt.num_threads = ncnn::get_big_cpu_count();
     nanodet.opt.blob_allocator = &blob_pool_allocator;
     nanodet.opt.workspace_allocator = &workspace_pool_allocator;
-    // printf("ncnn 用了 %d 条大核 thread\n ", ncnn::get_big_cpu_count());
+    printf("ncnn 用了 %d 大核 thread\n ", ncnn::get_big_cpu_count());
+
+    // 设置 fp16p 加速
+    // nanodet.opt.use_packing_layout = true;
+    // nanodet.opt.use_bf16_storage = true;
 
     char parampath[256];
     char modelpath[256];
@@ -249,46 +253,6 @@ int NanoDet::load(const char* model_path, const char* modeltype, int _target_siz
 
     return 0;
 }
-
-/*
-int NanoDet::load(AAssetManager* mgr, const char* modeltype, int _target_size, const float* _mean_vals, const float* _norm_vals, bool use_gpu)
-{
-    nanodet.clear();
-    blob_pool_allocator.clear();
-    workspace_pool_allocator.clear();
-
-    ncnn::set_cpu_powersave(2);
-    ncnn::set_omp_num_threads(ncnn::get_big_cpu_count());
-
-    nanodet.opt = ncnn::Option();
-
-#if NCNN_VULKAN
-    nanodet.opt.use_vulkan_compute = use_gpu;
-#endif
-
-    nanodet.opt.num_threads = ncnn::get_big_cpu_count();
-    nanodet.opt.blob_allocator = &blob_pool_allocator;
-    nanodet.opt.workspace_allocator = &workspace_pool_allocator;
-
-    char parampath[256];
-    char modelpath[256];
-    sprintf(parampath, "nanodet-%s.param", modeltype);
-    sprintf(modelpath, "nanodet-%s.bin", modeltype);
-
-    nanodet.load_param(mgr, parampath);
-    nanodet.load_model(mgr, modelpath);
-
-    target_size = _target_size;
-    mean_vals[0] = _mean_vals[0];
-    mean_vals[1] = _mean_vals[1];
-    mean_vals[2] = _mean_vals[2];
-    norm_vals[0] = _norm_vals[0];
-    norm_vals[1] = _norm_vals[1];
-    norm_vals[2] = _norm_vals[2];
-
-    return 0;
-}
-*/
 
 int NanoDet::detect(const cv::Mat& rgb, std::vector<Object>& objects, float prob_threshold, float nms_threshold)
 {

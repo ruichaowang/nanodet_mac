@@ -1,22 +1,22 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /Users/wangruichao/Work/Archive/NCNN/nanodet_mac/build_android/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_06fa5/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_06fa5.dir/build.make CMakeFiles/cmTC_06fa5.dir/build
-Building C object CMakeFiles/cmTC_06fa5.dir/src.c.o
-/Users/wangruichao/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android24 --sysroot=/Users/wangruichao/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions  -O2 -g -DNDEBUG -fPIE -MD -MT CMakeFiles/cmTC_06fa5.dir/src.c.o -MF CMakeFiles/cmTC_06fa5.dir/src.c.o.d -o CMakeFiles/cmTC_06fa5.dir/src.c.o -c /Users/wangruichao/Work/Archive/NCNN/nanodet_mac/build_android/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b722a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b722a.dir/build.make CMakeFiles/cmTC_b722a.dir/build
+Building C object CMakeFiles/cmTC_b722a.dir/src.c.o
+/Users/wangruichao/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android24 --sysroot=/Users/wangruichao/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions  -O2 -g -DNDEBUG -fPIE -MD -MT CMakeFiles/cmTC_b722a.dir/src.c.o -MF CMakeFiles/cmTC_b722a.dir/src.c.o.d -o CMakeFiles/cmTC_b722a.dir/src.c.o -c /Users/wangruichao/Work/Archive/NCNN/nanodet_mac/build_android/CMakeFiles/CMakeTmp/src.c
 /Users/wangruichao/Work/Archive/NCNN/nanodet_mac/build_android/CMakeFiles/CMakeTmp/src.c:13:3: warning: implicit declaration of function 'pthread_cancel' is invalid in C99 [-Wimplicit-function-declaration]
   pthread_cancel(thread);
   ^
 1 warning generated.
-Linking C executable cmTC_06fa5
-/opt/homebrew/Cellar/cmake/3.22.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06fa5.dir/link.txt --verbose=1
-/Users/wangruichao/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android24 --sysroot=/Users/wangruichao/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions  -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections  CMakeFiles/cmTC_06fa5.dir/src.c.o -o cmTC_06fa5   -latomic -lm 
+Linking C executable cmTC_b722a
+/opt/homebrew/Cellar/cmake/3.22.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b722a.dir/link.txt --verbose=1
+/Users/wangruichao/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android24 --sysroot=/Users/wangruichao/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions  -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections  CMakeFiles/cmTC_b722a.dir/src.c.o -o cmTC_b722a   -latomic -lm 
 ld: error: undefined symbol: pthread_cancel
 >>> referenced by src.c:13
->>>               CMakeFiles/cmTC_06fa5.dir/src.c.o:(main)
+>>>               CMakeFiles/cmTC_b722a.dir/src.c.o:(main)
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [cmTC_06fa5] Error 1
-make: *** [cmTC_06fa5/fast] Error 2
+make[1]: *** [cmTC_b722a] Error 1
+make: *** [cmTC_b722a/fast] Error 2
 
 
 Source file was:

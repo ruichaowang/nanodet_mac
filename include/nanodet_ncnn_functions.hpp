@@ -115,9 +115,8 @@ int loadModel(const char* model_reletive_path , int modelid, int cpugpu)
   {
       if (!g_nanodet)
           g_nanodet = new NanoDet;
-      // printf("找到 GPU， 开始 Load \n ");
       g_nanodet->load( model_reletive_path, modeltype, target_size, mean_vals[modelid], norm_vals[modelid], use_gpu);
-      // printf("找 GPU，Load，当前炸掉 \n ");
+      printf("模型成功 Load\n ");
   }
 
   return 0;
